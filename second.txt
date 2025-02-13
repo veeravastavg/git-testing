@@ -41,5 +41,5 @@ resource "oci_core_subnet" "my_subnet" {
   vcn_id              = oci_core_vcn.my_vcn.id
   cidr_block          = var.subnet_cidr
   display_name        = var.subnet_name
-  prohibit_public_ip_on_vnic = true
+  prohibit_public_ip_on_vnic = false # Set to true to disable public IPs
 }
